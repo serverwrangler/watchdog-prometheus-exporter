@@ -27,6 +27,24 @@ const watchdog_Humidity = new prom.Gauge({
   ]
 });
 
+const watchdog_DewPtC = new prom.Gauge({
+  name: 'watchdog_DewPtC',
+  help: 'Dew Point (C)',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
+const watchdog_DewPtF = new prom.Gauge({
+  name: 'watchdog_DewPtF',
+  help: 'Dew Point (F)',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
+
+
 const watchdog_Airflow = new prom.Gauge({
   name: 'watchdog_Airflow',
   help: 'Air Flow',
@@ -74,6 +92,43 @@ const watchdog_IO3 = new prom.Gauge({
     'deviceName'
   ]
 });
+
+const watchdog_Ext1TempC = new prom.Gauge({
+  name: 'watchdog_Ext1TempC',
+  help: 'ExternalTemp-1(C)',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
+const watchdog_Ext1TempF = new prom.Gauge({
+  name: 'watchdog_Ext1TempF',
+  help: 'ExternalTemp-1(F)',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
+const watchdog_Ext2TempC = new prom.Gauge({
+  name: 'watchdog_Ext2TempC',
+  help: 'ExternalTemp-2(C)',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
+const watchdog_Ext2TempF = new prom.Gauge({
+  name: 'watchdog_Ext2TempF',
+  help: 'ExternalTemp-2(F)',
+  labelNames: [
+    'deviceName'
+  ]
+});
+
+
+
+
+
 
 async function getAll() {
   // Fetch XML from device
