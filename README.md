@@ -20,11 +20,11 @@ This exporter provides the following metrics:
 
 
 ### Build instructions for standalone docker image
-cd ~
-git clone https://github.com/serverwrangler/watchdog-prometheus-exporter.git
-# modify the Dockerfile to match your IT watchdog ip address at ENV WATCHDOG_PATH='http://<ip here>/data.xml'
-sudo docker build -t serverwrangler/watchdog-prometheus-exporter -f ~/watchdog-prometheus-exporter/Dockerfile . 
-sudo docker run --publish 8000:8000 --detach --name watchdog-prometheus-exporter serverwrangler/watchdog-prometheus-exporter
+`cd ~`
+`git clone https://github.com/serverwrangler/watchdog-prometheus-exporter.git`
+modify the Dockerfile to match your IT watchdog ip address at ENV WATCHDOG_PATH='http://<ip here>/data.xml'
+`sudo docker build -t serverwrangler/watchdog-prometheus-exporter -f ~/watchdog-prometheus-exporter/Dockerfile .`
+`sudo docker run --publish 8000:8000 --detach --name watchdog-prometheus-exporter serverwrangler/watchdog-prometheus-exporter`
 
 You now should be able to open a browser and go to http://localhost:8000/healthz and get a OK status. 
 Then check the metrics at http://localhost:8000/metrics
