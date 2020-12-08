@@ -1,12 +1,12 @@
 {
   "name": "watchdog-prometheus-exporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js"
   },
-  "author": "Brant Taylor",
+  "author": "Brant Taylor - Updates ServerWrangler",
   "license": "ISC",
   "dependencies": {
     "convict": "^6.0.0",
@@ -17,6 +17,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:branttaylor/watchdog-prometheus-exporter.git"
+    "url": "git@github.com:serverwrangler/watchdog-prometheus-exporter.git"
   }
 }

@@ -7,8 +7,10 @@ RUN apk update && apk add --no-cache \
 
 WORKDIR /app
 
-RUN git clone https://github.com/branttaylor/watchdog-prometheus-exporter.git /app && \
+RUN git clone https://github.com/serverwrangler/watchdog-prometheus-exporter.git /app && \
     npm install
+
+ENV WATCHDOG_PATH='http://10.33.9.18/data.xml'
 
 CMD npm start
 
