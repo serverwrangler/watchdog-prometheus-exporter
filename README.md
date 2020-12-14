@@ -36,12 +36,12 @@ You now should be able to open a browser and go to http://localhost:8000/healthz
 Then check the metrics at http://localhost:8000/metrics
 
 ### Prometheus Scrape Job examples
-`- job_name: watchdog-prometheus-exporter
+```- job_name: watchdog-prometheus-exporter
     # If prometheus-node-exporter is installed, grab stats about the local
     # machine by default.
     static_configs:
       - targets: ['localhost:8000']
-`
+```
 
 
 ### Environment Variables
