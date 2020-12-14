@@ -25,7 +25,7 @@ This exporter provides the following metrics:
 `git clone https://github.com/serverwrangler/watchdog-prometheus-exporter.git`
 
 
-modify the Dockerfile to match your IT watchdog ip address at ENV WATCHDOG_PATH='http://<ip here>/data.xml'
+modify the Dockerfile to match your IT watchdog ip address at `ENV WATCHDOG_PATH='http://<ip here>/data.xml'`
 
 `sudo docker build -t serverwrangler/watchdog-prometheus-exporter -f ~/watchdog-prometheus-exporter/Dockerfile .`
 
@@ -34,6 +34,14 @@ modify the Dockerfile to match your IT watchdog ip address at ENV WATCHDOG_PATH=
 
 You now should be able to open a browser and go to http://localhost:8000/healthz and get a OK status. 
 Then check the metrics at http://localhost:8000/metrics
+
+### Prometheus Scrape Job examples
+`- job_name: watchdog-prometheus-exporter
+    # If prometheus-node-exporter is installed, grab stats about the local
+    # machine by default.
+    static_configs:
+      - targets: ['localhost:8000']
+`
 
 
 ### Environment Variables
